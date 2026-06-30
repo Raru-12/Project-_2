@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Schudule Reminder</title>
+
+    <link rel="stylesheet" href="stlyle_1.css">
+</head>
+<body>
+    
+    <div class="container">
+
+    <div class="clock"id='clock'></div>
+    
+    <h1>🗓Smart Schedule Reminder</h1>
+
+    <div class="from grid"><input type="number" id="hour" min="0" max="23" placeholder="Jam">
+    
+    <input type="number" id="day" min="1" max="31" placeholder="Tanggal">
+    <input type="number" id="month" min="1" max="12" placeholder="Bulan">
+    <input type="number" id="year" placeholder="Tahun">
+
+    <input type="text" id="activity" placeholder="Kegiatan yang ingin dilakukan">
+
+    <br><br>
+
+    <button class="add-btn" onclick="addschedule()">Tambah Jadwal</button>
+
+    <div class="Schedule-list" id="ScheduleList"></div>
+    
+    </div>
+
+    <div class="NOTIFICATION" id="notification">
+        <h3>⏱ Alarm Kegiatan</h3>
+        <p id="notiftext"></p>
+        <button onclick="stopAlarm()">Matikan Alarm</button>
+    </div>
+
+    
+       </script>
+    
+
+</body>
+</html>

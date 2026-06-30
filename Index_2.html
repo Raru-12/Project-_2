@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Schedule Pro</title>
+
+    <link rel="stylesheet" href="Style_2.css">
+    <script src="Script_2.js" defer></script>
+
+
+</head>
+<body>
+    <div id="root"></div>
+
+    <div class="container">
+
+    <div class="top">
+        <h1>📆 Smart Schedule Pro</h1>
+        <button onclick="toggleTheme()">🌙/🌞</button>
+    </div>
+
+    <div class="card">
+        <h2 id="clock"></h2>
+        <p id="stats"></p>
+    </div>
+
+    <div class="cared">
+        <div class="grid">
+            <input type="datetime-local" id="dt">
+            <input type="text" id="activity" placeholder="Nama Kegiatan">
+            <input type="number" id="durationValue" min="1" placeholder="Durasi">
+            <select id="durationUnit">
+                <option value="minute">Menit</option>
+                <option value="hour">Jam</option>
+            </select>
+            <button id="saveTaskBtn" onclick="saveTask()">Tambah Jadwal</button>
+            <button onclick="cancelEdit()">Batal Edit</button>
+            <button onclick="exportData()">Export JSON</button>
+            <input type="file" id="importFile">
+        </div>
+    </div>
+
+    <div id="activeTaskInfo" class="active-task"></div>
+
+    <div class="card">
+        <h3>Progress Kegiatan</h3>
+        <div class="progress">
+            <div class="bar" id="bar"></div>
+        </div>
+    </div>
+     
+    <div class="card">
+        <h3>Daftar Jadwal</h3>
+        <div id="list">
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>Daftar yang selesai</h3>
+        <div id="history">
+        </div>
+    </div>
+
+    </div>
+
+    <div id="alarmModal">
+        <div class="modal">
+            <h2>⏰ Alarm Kegiatan</h2>
+            <p id="alarmText"></p>
+            <p id="alarmCountdown"></p>
+            <button onclick="stopAlarm()">Matikan Alarm</button>
+        </div>
+    </div>
+
+</body>
+</html>
